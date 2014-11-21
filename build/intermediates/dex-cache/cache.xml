@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="C:\Users\Leondria\AndroidStudioProjects\com.leobee.animeconvention.manager1\app\build\intermediates\pre-dexed\debug\commons-io-2.3-sources-a013bdfb7df4199d7cbccfd5e20e2408aad4aeb7.jar"
+        jar="C:\Users\Leondria\AndroidStudioProjects\com.leobee.animeconvention.manager1\app\libs\commons-io-2.3-sources.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="ba0ce5e28373e2a21f71395e711b961563ff619d"/>
+    <item
+        dex="C:\Users\Leondria\AndroidStudioProjects\com.leobee.animeconvention.manager1\app\build\intermediates\pre-dexed\debug\commons-io-2.3-d100ccf6052e27359bb07da99786d5d1ec336a79.jar"
+        jar="C:\Users\Leondria\AndroidStudioProjects\com.leobee.animeconvention.manager1\app\libs\commons-io-2.3.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="cd8d6ffc833cc63c30d712a180f4663d8f55799b"/>
+    <item
+        dex="C:\Users\Leondria\AndroidStudioProjects\com.leobee.animeconvention.manager1\app\build\intermediates\pre-dexed\debug\commons-io-2.3-tests-2504ee59fb7360805e722fa2a8c29be90abf6401.jar"
+        jar="C:\Users\Leondria\AndroidStudioProjects\com.leobee.animeconvention.manager1\app\libs\commons-io-2.3-tests.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="9b9b128891ada8eb32ef4b58fdc9a9ef12b0bfa0"/>
+    <item
+        dex="C:\Users\Leondria\AndroidStudioProjects\com.leobee.animeconvention.manager1\app\build\intermediates\pre-dexed\debug\commons-io-2.3-javadoc-6dbc40823b6cd281a211972eb7d0877efdf5f424.jar"
+        jar="C:\Users\Leondria\AndroidStudioProjects\com.leobee.animeconvention.manager1\app\libs\commons-io-2.3-javadoc.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="b461dcfd42820f613df68c9592d407bfe260f9cb"/>
+
+</pre-dex-items>

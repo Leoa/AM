@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:background="@null"
+        android:text="Logout"
+        android:textColor="#00ccff"
+        android:textSize="20dip"
+        android:textStyle="bold" android:layout_gravity="right" android:layout_marginRight="5dip"/>
+
+    <Button
+        android:id="@+id/btnSchedule"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:gravity="center"
+        android:text="Edit Schedule"
+        android:textSize="20dp" />
+    
+        <Button
+         android:id="@+id/btnMessage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:gravity="center"
+        android:text="Send Message to Members"
+        android:textSize="20dp" />
+ 
+    
+</LinearLayout><!-- From: file:/C:/Users/Leondria/AndroidStudioProjects/com.leobee.animeconvention.manager1/app/src/main/res/layout/dashboard.xml -->

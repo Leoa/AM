@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+        <TextView
+        android:id="@+id/NameDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/NameDisplayx"
+        android:layout_toRightOf="@id/NameDisplayx"
+        android:text="x" />
+
+    <TextView
+        android:id="@+id/DateDisplayx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/NameDisplayx"
+        android:text="Day: " />
+
+    <TextView
+        android:id="@+id/DateDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/DateDisplayx"
+        android:layout_toRightOf="@id/DateDisplayx"
+        android:text="x" />
+
+    <TextView
+        android:id="@+id/StartTimeDisplayx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DateDisplayx"
+        android:text="Start Time: " />
+
+    <TextView
+        android:id="@+id/StartTimeDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/StartTimeDisplayx"
+        android:layout_toRightOf="@id/StartTimeDisplayx"
+        android:text="x" />
+
+    <TextView
+        android:id="@+id/EndTimeDisplayx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/StartTimeDisplayx"
+        android:text="End Time: " />
+
+    <TextView
+        android:id="@+id/EndTimeDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/EndTimeDisplayx"
+        android:layout_toRightOf="@id/EndTimeDisplayx"
+        android:text="x" />
+
+    <TextView
+        android:id="@+id/LocationDisplayx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/EndTimeDisplayx"
+        android:text="Location: " />
+
+    <TextView
+        android:id="@+id/LocationDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/LocationDisplayx"
+        android:layout_toRightOf="@id/LocationDisplayx"
+        android:text="x" />
+    
+
+</LinearLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <TextView
+        android:id="@+id/Resolvetxt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="@color/yellow"
+        android:gravity="center"
+        android:padding="3dp"
+        android:textStyle="bold"
+        android:text="Reslove Time Conflict"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/NameDisplayx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Resolvetxt"
+        android:background="#CCCCCC"
+        android:text="Event: "
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/NameDisplay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/NameDisplayx"
+        android:layout_toRightOf="@id/NameDisplayx"
+        android:background="#CCCCCC"
+        android:text="x"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/DateDisplayx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/NameDisplayx"
+        android:background="#CCCCCC"
+        android:text="Date: "
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/DateDisplay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/DateDisplayx"
+        android:layout_toRightOf="@id/DateDisplayx"
+        android:background="#CCCCCC"
+        android:text="x"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/StartTimeDisplayx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DateDisplayx"
+        android:background="#CCCCCC"
+        android:text="Start Time: "
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/StartTimeDisplay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/StartTimeDisplayx"
+        android:layout_toRightOf="@id/StartTimeDisplayx"
+        android:background="#CCCCCC"
+        android:text="x"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/Block"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/StartTimeDisplayx"
+        android:padding="5dp"
+        android:text="Event Conflicts With:"
+        android:textColor="#000000" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="75dp"
+        android:layout_below="@id/Block"
+        android:background="#000000"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/Block2"
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/scrollView" />
+
+    <WebView
+        android:id="@+id/webView1"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Block2" />
+
+    <Button
+        android:id="@+id/btnUpdateSchedule"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:text="Update Schedule"
+        android:textColor="#000000" />
+
+</RelativeLayout>

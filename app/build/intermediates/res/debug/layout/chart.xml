@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".manager.About" >
+
+    <WebView
+        android:id="@+id/webViewChart"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".90" >
+    </WebView>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".10"
+        android:text="Back To List"
+        android:textColor="#000000" />
+
+</LinearLayout><!-- From: file:/C:/Users/Leondria/AndroidStudioProjects/com.leobee.animeconvention.manager1/app/src/main/res/layout/chart.xml -->

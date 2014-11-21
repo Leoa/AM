@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/titleDisplay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#00ccff"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/dateDisplayx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleDisplay"
+        android:text="Date : "
+         android:background="#FFFFFF"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/dateDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/dateDisplayx"
+        android:layout_toRightOf="@id/dateDisplayx"
+        android:text="x"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/pickDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       
+        android:layout_below="@id/dateDisplayx"
+        android:text="Change the Date"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/timeEndDisplayx"
+        android:layout_width="wrap_content"
+        android:layout_height="-19dp"
+        android:layout_alignLeft="@+id/pickTime2"
+        android:layout_below="@id/pickDate"
+        android:layout_marginRight="5dp"
+        android:text="To:"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/pickTime2"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/pickTime"
+        android:text="End Time" />
+
+    <TextView
+        android:id="@+id/timeDisplayx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/pickDate"
+        android:layout_marginRight="5dp"
+        android:text="From: "
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/timeDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/dateDisplay"
+        android:layout_alignRight="@+id/pickTime"
+        android:layout_below="@id/pickDate"
+        android:text="8:00 pm"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/pickTime"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/timeEndDisplayx"
+        android:text="Start Time " />
+
+    <TextView
+        android:id="@+id/timeEndDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/pickDate"
+        android:layout_toRightOf="@+id/timeEndDisplayx"
+        android:text=""
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/spinnerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pickTime"
+        android:layout_marginTop="10dip"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/spinnerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pickTime2"
+        android:layout_marginTop="10dip"
+        android:text="@string/planet_prompt"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/locationDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/spinnerText"
+        android:layout_toRightOf="@id/spinnerText"
+        android:text="x"
+        android:textColor="#000000" />	
+        
+        
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinnerText"
+        android:prompt="@string/planet_prompt"
+        android:textColor="#000000" />
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_margin="3dp"
+        android:layout_below="@id/spinner"
+        android:onClick="onCheckboxClicked"
+        android:text="Remove Event From Schedule"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/btnsave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkbox"
+        android:text="Save and Notify Members"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/spinner"
+        android:layout_alignTop="@id/btnsave"
+        android:layout_toRightOf="@id/btnsave"
+        android:text="Back to List"
+        android:textColor="#000000" />
+
+</RelativeLayout><!-- From: file:/C:/Users/Leondria/AndroidStudioProjects/com.leobee.animeconvention.manager1/app/src/main/res/layout/updatewiggets.xml -->

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.leobee.animeconvention.manager"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CONTROL_LOCATION_UPDATES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="false"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="false"
+        android:xlargeScreens="false" />
+
+    <application
+        android:icon="@drawable/adminicon"
+        android:label="@string/app_name" >
+        <activity
+            android:name="com.leobee.animeconvention.manager.loging.DashboardActivity"
+            class="com.leobee.animeconvention.manager.loging.DashboardActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.leobee.animeconvention.manager.loging.DashboardActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.leobee.animeconvention.manager.loging.Splash" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Login Activity -->
+        <activity
+            android:name="com.leobee.animeconvention.manager.loging.LoginActivity"
+            android:label="Login Account" >
+        </activity>
+
+        <!-- Register Activity -->
+        <activity
+            android:name="com.leobee.animeconvention.manager.loging.RegisterActivity"
+            android:label="Register New Account" >
+        </activity>
+        <activity
+            android:name="com.leobee.animeconvention.manager.manager.DataView"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.leobee.animeconvention.manager.manager.SendMessageToAll"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.leobee.animeconvention.manager.manager.About"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.leobee.animeconvention.manager.manager.Tutorial"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.leobee.animeconvention.manager.manager.UpdateServer"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.leobee.animeconvention.manager.manager.ResolveTimeConflict"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.leobee.animeconvention.manager.manager.ResolveTimeConflict2"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.leobee.animeconvention.manager.manager.Chart"
+            android:label="@string/app_name" >
+        </activity>
+"
+    </application>
+
+</manifest>

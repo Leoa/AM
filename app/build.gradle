@@ -1,0 +1,30 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 'Google Inc.:Google APIs:10'
+    buildToolsVersion "21.1.1"
+
+    defaultConfig {
+        applicationId "com.leobee.animeconvention.manager"
+        minSdkVersion 8
+        targetSdkVersion 8
+    }
+
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+android {	  packagingOptions {
+    exclude 'META-INF/NOTICE.txt'}	}
+
+android {	  packagingOptions {
+    exclude 'META-INF/LICENSE.txt'}	}
+dependencies {
+    compile files('libs/commons-io-2.3-javadoc.jar')
+    compile files('libs/commons-io-2.3-sources.jar')
+    compile files('libs/commons-io-2.3-tests.jar')
+    compile files('libs/commons-io-2.3.jar')
+}
