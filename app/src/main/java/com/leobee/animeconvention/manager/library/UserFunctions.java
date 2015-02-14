@@ -42,7 +42,8 @@ public class UserFunctions {
         paramsx.add(new BasicNameValuePair("password", password));
         String params = "tag="+login_tag+"&email="+email+"&password="+password; 
         JSONObject json = jsonParser.getJSONFromUrl(loginURL, paramsx);
-        Log.v(" Login url ", loginURL);
+        Log.v(" --------------------------Login url ", registerURL);
+        Log.i("---------------------------url placed in json object",  params);
         Log.e("JSON", json.toString());
        return json;
     }
@@ -64,8 +65,8 @@ public class UserFunctions {
  
         String params = "tag="+register_tag+"&name="+name+"&email="+email+"&password="+password;  
         // getting JSON Object
-        Log.v(" Register url ", registerURL);
-       // Log.v("url placed in json object",  params);
+        Log.v(" --------------------------Register url ", registerURL);
+        Log.i("---------------------------url placed in json object",  params);
         JSONObject json = jsonParser.getJSONFromUrl(registerURL, paramsx);
         // return json
         //Log.v("JSON parser string", json.toString());

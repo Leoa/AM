@@ -566,6 +566,47 @@ Intent intent = new Intent(DataView.this, DataView.class );
         return true;
         default:
         return super.onOptionsItemSelected(item);
+        }
+
+
     }
+
+    public void onBackPressed() {
+
+        // handle back button
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(
+                DataView.this);
+        // Setting Dialog Title
+        alertDialog.setTitle("Leave application?");
+        // Setting Dialog Message
+        alertDialog.setMessage("Are you sure you want to leave the application?");
+        // Setting Icon to Dialog
+        alertDialog.setIcon(R.drawable.ic_launcher);
+        // Setting Positive "Yes" Button
+        alertDialog.setPositiveButton("YES",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+                    }
+                });
+        // Setting Negative "NO" Button
+        alertDialog.setNegativeButton("NO",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Write your code here to invoke NO event
+                        dialog.cancel();
+                    }
+                });
+        // Showing Alert Message
+        alertDialog.show();
     }
+    public void backButtonHandler() {
+
+
+
+    }
+
 }

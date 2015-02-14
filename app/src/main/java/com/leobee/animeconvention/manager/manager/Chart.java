@@ -29,8 +29,9 @@ public class Chart extends Activity{
 		webView.getSettings().setAppCacheEnabled(false);
 		
 		webView.setInitialScale(70);
-		
-		webView.loadUrl("http://txtease.com/android/push/so/ganttChart/chart2.php");
+		//
+		//webView.loadUrl("http://txtease.com/android/push/so/ganttChart/chart2.php");
+        webView.loadUrl("http://www.txtease.com/android/push/login/schedule/mbielan/index.html");
 		// go back  to list
 		Button button2 = (Button) findViewById(R.id.btnBack);
 		button2.setOnClickListener(new View.OnClickListener() {

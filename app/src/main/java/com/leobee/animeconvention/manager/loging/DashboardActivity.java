@@ -35,10 +35,7 @@ public class DashboardActivity extends Activity {
             
             btnMessage.setOnClickListener(new View.OnClickListener() {
           	  
-                public void onClick(View arg0) { 
-                	
-              	  
-              	 
+                public void onClick(View arg0) {
               	  Intent login = new Intent(getApplicationContext(),  SendMessageToAll.class);
                     login.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(login);
@@ -81,5 +78,14 @@ public class DashboardActivity extends Activity {
             // Closing dashboard screen
             finish();
         }
+
+
+
     }
+
+
+
+
+
+
 }

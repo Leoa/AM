@@ -5,27 +5,41 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Layout;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.leobee.animeconvention.manager.R;
 import com.leobee.animeconvention.manager.library.DatabaseHandler;
 import com.leobee.animeconvention.manager.library.UserFunctions;
 import com.leobee.animeconvention.manager.manager.DataView;
- 
+import com.leobee.animeconvention.manager.utilities.AppStatus;
+
+
 public class LoginActivity extends Activity {
+    Context context;
     Button btnLogin;
     Button btnLinkToRegister;
     EditText inputEmail;
     EditText inputPassword;
     TextView loginErrorMsg;
+    JSONObject json;
+    UserFunctions userFunction;
+    Context ctx= this;
  
     
     // JSON Response node names
@@ -66,44 +80,53 @@ public class LoginActivity extends Activity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
  
             public void onClick(View view) {
-            	
+
                 String email = inputEmail.getText().toString();
                 String password = inputPassword.getText().toString();
-                UserFunctions userFunction = new UserFunctions();
-                JSONObject json = userFunction.loginUser(email, password);
- 
-                // check for login response
-                try {
-                    if (json.getString(KEY_SUCCESS) != null) {
-                        loginErrorMsg.setText("");
-                        String res = json.getString(KEY_SUCCESS);
-                        if(Integer.parseInt(res) == 1){
-                            // user successfully logged in
-                            // Store user details in SQLite Database
-                            DatabaseHandler db = new DatabaseHandler(getApplicationContext());
-                            JSONObject json_user = json.getJSONObject("user");
- 
-                            // Clear all previous data in database
-                            userFunction.logoutUser(getApplicationContext());
-                            db.addUser(json_user.getString(KEY_NAME), json_user.getString(KEY_EMAIL), json.getString(KEY_UID), json_user.getString(KEY_CREATED_AT));                       
- 
-                            // Launch Dashboard Screen
-                            Intent dashboard = new Intent(getApplicationContext(), DataView.class);
- 
-                            // Close all views before launching Dashboard
-                            dashboard.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                            startActivity(dashboard);
- 
-                            // Close Login Screen
-                            finish();
-                        }else{
-                            // Error in login
-                            loginErrorMsg.setText("Incorrect username/password");
+
+                if (AppStatus.getInstance(context).isOnline(context)) {
+                    Log.v("application", " is online");
+                 userFunction = new UserFunctions();
+                 json = userFunction.loginUser(email, password);
+                    // check for login response
+                    try {
+                        if (json.getString(KEY_SUCCESS) != null) {
+                            loginErrorMsg.setText("");
+                            String res = json.getString(KEY_SUCCESS);
+                            if(Integer.parseInt(res) == 1){
+                                // user successfully logged in
+                                // Store user details in SQLite Database
+                                DatabaseHandler db = new DatabaseHandler(getApplicationContext());
+                                JSONObject json_user = json.getJSONObject("user");
+
+                                // Clear all previous data in database
+                                userFunction.logoutUser(getApplicationContext());
+                                db.addUser(json_user.getString(KEY_NAME), json_user.getString(KEY_EMAIL), json.getString(KEY_UID), json_user.getString(KEY_CREATED_AT));
+
+                                // Launch Dashboard Screen
+                                Intent dashboard = new Intent(getApplicationContext(), DataView.class);
+
+                                // Close all views before launching Dashboard
+                                dashboard.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                startActivity(dashboard);
+
+                                // Close Login Screen
+                                finish();
+                            }else{
+                                // Error in login
+                                loginErrorMsg.setText("Incorrect username/password");
+                            }
                         }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
                     }
-                } catch (JSONException e) {
-                    e.printStackTrace();
+
+                } else {
+
+                    Log.v("application", " is Not online");
+                    Toast.makeText(ctx," Unable to login because internet is unavailable.", Toast.LENGTH_LONG).show();
                 }
+
             }
         });
  
@@ -129,8 +152,17 @@ public class LoginActivity extends Activity {
      inputPassword.clearAnimation();
      btnLogin.clearAnimation();
      btnLinkToRegister.clearAnimation();
-     
-     
-     
     }
+
+
+
+    public void onBackPressed() {
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+
+
+
 }
