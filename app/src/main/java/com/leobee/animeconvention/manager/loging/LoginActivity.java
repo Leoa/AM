@@ -82,6 +82,7 @@ public class LoginActivity extends Activity {
             public void onClick(View view) {
 
                 String email = inputEmail.getText().toString();
+                
                 String password = inputPassword.getText().toString();
 
                 if (AppStatus.getInstance(context).isOnline(context)) {
